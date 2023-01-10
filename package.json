@@ -1,0 +1,16 @@
+{
+  "name": "proyectoprueba",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "es-dev-server --app-index index.html --node-resolve --watch --open"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "es-dev-server": "^2.1.0",
+    "lit-analyzer": "^1.2.1",
+    "lit-element": "^3.2.2"
+  }
+}
