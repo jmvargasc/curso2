@@ -1,0 +1,14 @@
+{
+  "name": "p06",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "es-dev-server --app-index.html --node-resolve --watch --open"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lit-element": "^3.2.2"
+  }
+}
