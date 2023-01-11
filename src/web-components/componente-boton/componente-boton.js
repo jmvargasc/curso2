@@ -26,21 +26,23 @@ class ComponenteBoton  extends LitElement {
   static get properties() {
     return {
         name : {type : String},
-        handleDisabled : {}
+        disabledBut : {type : String},
     };
   }
 
   constructor() {
     super();
     this.name = "Boton";
-    this.handleDisabled = false;
+    this.disabledBut = "false";
   }
 
   _dispatchMyEvent(e) {
-    const detail = {
-        handleDisabled : this.handleDisabled
-      }
-    let myEvent = new CustomEvent('boton-cuenta', {
+    let detail ={
+      p1 : "parrafo4",
+      p2 : "parrafo5",
+      p3 : "parrafo6"
+    }
+    let myEvent = new CustomEvent('cambia-color', {
       detail,
       bubbles: true,
       composed: true });
@@ -49,16 +51,13 @@ class ComponenteBoton  extends LitElement {
     if (myEvent.defaultPrevented) {
         e.preventDefault();
       }
-    this.handleDisabled = detail.handleDisabled;
-
-    console.log("valor de handlerDisabled: ", this.handleDisabled);
+    
   }
   
 
   render() {
     return html`
-    ${console.log("valor de handlerDisabled 2", this.handleDisabled)}
-      <button class="boton" @click=${this._dispatchMyEvent} ?disabled=${this.handleDisabled}>${this.name}</button>
+        <button class="boton" @click=${this._dispatchMyEvent} ?disabled=${this.disabledBut === "true" ? true: false}>${this.name} ${this.handleDisabled}</button>      
     `;
   }
 }
